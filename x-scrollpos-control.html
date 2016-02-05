@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="x-scrollpos-control">
+
+    <script>
+
+        Polymer({
+            is: 'x-scrollpos-control',
+            properties: {
+                selected: {
+                    observer: '_selectedChanged'
+                },
+                reset: {
+                    type: Boolean
+                }
+            },
+
+            created: function() {
+                this._scrollposMap = {};
+            },
+
+            _selectedChanged: function(selected, old) {
+                if (old != null) {
+                    this._scrollposMap[old] = {x: window.pageXOffset, y: window.pageYOffset};
+                }
+                var pos = this._scrollposMap[selected];
+                if (pos != null && !this.reset) {
+                    window.scrollTo(pos.x, pos.y);
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            }
+
+        });
+
+    </script>
+
+</dom-module>
