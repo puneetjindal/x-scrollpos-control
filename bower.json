@@ -1,0 +1,13 @@
+{
+  "name": "x-scrollpos-control",
+  "homepage": "https://github.com/puneetjindal/x-scrollpos-control",
+  "_release": "74f4b116bb",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "74f4b116bb5ee32b9986ba9c1767515bbeb5e029"
+  },
+  "_source": "git://github.com/puneetjindal/x-scrollpos-control.git",
+  "_target": "master",
+  "_originalSource": "puneetjindal/x-scrollpos-control"
+}
